@@ -1,0 +1,11 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1>Welcome to Student Portal</h1>
+{% if user.is_authenticated %}
+    <p>You are logged in as {{ user.username }}.</p>
+    <!-- Future content for logged in users -->
+{% else %}
+    <p>Please login or register to access the portal.</p>
+{% endif %}
+{% endblock %}
